@@ -1,0 +1,27 @@
+sticky yes
+
+fontname "terminus:pixelsize=16:bold"
+
+borderwidth 3
+color activeborder green
+
+gap 3 0 0 0
+
+#unbind-key CM-Return
+bind-key CM-Return "xterm"
+bind-key 4-Return "xterm -e tmux -u2"
+bind-key XF86AudioRaiseVolume "mixerctl outputs.master=+5"
+bind-key XF86AudioLowerVolume "mixerctl outputs.master=-5"
+bind-key XF86AudioMute "mixerctl outputs.master=toggle"
+#bind-key XF86Display "xterm -e sh /home/jmc/monitor.sh"
+bind-key 4-o "xterm -e sh /home/jmc/monitor.sh"
+bind-key 4-d dmenu_run 
+bind-key 4-q "xterm -e doas shutdown -p now"
+bind-key 4-r "xterm -e doas reboot"
+bind-key 4-l "xterm -e xlock"
+bind-key 4-b "xterm -e sh /home/jmc/statusbar.sh"
+
+# mod + V = tile windows vertically, current window to the left
+bind-key 4-z window-vtile
+# mod + V = tile windows horizontally, current window to the top
+bind-key 4-x window-htile
