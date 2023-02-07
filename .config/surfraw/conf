@@ -1,1 +1,3 @@
-
+SURFRAW_text_browser=/usr/local/bin/lynx
+SURFRAW_graphical_browser=/usr/local/bin/chrome
+SURFRAW_graphical=no
