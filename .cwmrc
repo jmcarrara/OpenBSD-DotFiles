@@ -2,7 +2,7 @@ sticky yes
 
 fontname "terminus:pixelsize=16:bold"
 
-borderwidth 3
+borderwidth 4
 color activeborder green
 
 gap 3 0 0 0
@@ -13,13 +13,14 @@ bind-key 4-Return "xterm -e tmux -u2"
 bind-key XF86AudioRaiseVolume "mixerctl outputs.master=+5"
 bind-key XF86AudioLowerVolume "mixerctl outputs.master=-5"
 bind-key XF86AudioMute "mixerctl outputs.master=toggle"
-#bind-key XF86Display "xterm -e sh /home/jmc/monitor.sh"
-bind-key 4-o "xterm -e sh /home/jmc/monitor.sh"
-bind-key 4-d dmenu_run 
-bind-key 4-q "xterm -e doas shutdown -p now"
-bind-key 4-r "xterm -e doas reboot"
-bind-key 4-l "xterm -e xlock"
-bind-key 4-b "xterm -e sh /home/jmc/statusbar.sh"
+bind-key XF86Display "xterm -e sh /home/mauricioc/.monitor.sh"
+bind-key 4-i "sh /home/mauricioc/.vga-dp.sh"
+bind-key 4-o "sh /home/mauricioc/.monitor.sh"
+bind-key 4-p "sh /home/mauricioc/.dp-lvds.sh"
+bind-key 4-q "doas shutdown -p now"
+bind-key 4-r "doas reboot"
+bind-key 4-l "xlock"
+bind-key 4-c "chrome"
 
 # mod + V = tile windows vertically, current window to the left
 bind-key 4-z window-vtile
