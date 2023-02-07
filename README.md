@@ -1,2 +1,3 @@
-# obsd-dotfiles
-OpenBSB dot files
+# OpenBSD-DotFiles
+
+## My desktop configuration files
