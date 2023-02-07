@@ -1,1 +1,4 @@
+set drawbox
 
+map - $~/.config/lf/draw_img.sh "$f"
+map . set hidden!
