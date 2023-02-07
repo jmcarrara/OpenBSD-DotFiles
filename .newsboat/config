@@ -1,0 +1,42 @@
+#UNBIND KEYS
+unbind-key ^L
+unbind-key HOME
+unbind-key END
+unbind-key PPAGE
+unbind-key NPAGE
+unbind-key ENTER
+unbind-key h
+unbind-key j
+unbind-key k
+
+#BINDING KEYS
+bind-key h quit
+bind-key j down
+bind-key k up
+bind-key l open 
+bind-key u pageup
+bind-key d pagedown
+bind-key g home
+bind-key G end
+bind-key a redraw
+
+#CONFIGURATION
+external-url-viewer "urlview"
+bind-key U show-urls
+
+browser "xdg-open %u >/dev/null 2>&1 &"
+
+text-width 74
+
+notify-beep yes
+
+auto-reload yes
+
+reload-time 10
+
+reload-threads 50
+
+#MACROS
+macro m set browser "mpv --ytdl-format=18 %u >/dev/null 2>&1 &"; open-in-browser; set browser "xdg-open %u"
+macro b set browser "mpv --autofit=50% --ytdl-format=22 %u >/dev/null 2>&1 &"; open-in-browser; set browser "xdg-open %u"
+macro w set browser "reader %u | less -R"; open-in-browser; set browser "xdg-open %u"
